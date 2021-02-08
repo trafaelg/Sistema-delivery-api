@@ -1,0 +1,8 @@
+"Se sente desafiado? Quer mostrar os conhecimentos aplicados na prática?
+Tente criar uma aplicação utilizando Spring Boot, pensando no contexto de delivery de produtos, com cadastro de pessoas, contatos (telefone, endereço e e-mail, formas de pagamento (Cartão de crédito, cartão de débito ou dinheiro)) e produtos.
+A ideia conseguir cadastrar pessoas, seus dados de contato e criar uma dinâmica de seleção de produtos para entrega, indicando um dos meios de pagamento previamente indicados.
+A escolha do banco de dados é sua, pode ser local na sua máquina, em memória, na núvem, você decide."
+
+    Seguindo minha lógica de raciocínio, criei um package para cada objeto, endereço, cliente, carrinho, itens, pagamento e produto.
+    O pacote address, está ligado a client, onde tem a entidade, repositório, serviços e controller, a classe item, ligada ao carrinho, pois cada carrinho, recebe uma lista de itens, junto com o id do client e forma de pagamento, e mais as classes entidade, repositório, serviços e controller, e um pacote products, onde é listado os produtos e seus valores, com as classes entidade, repositório, serviços e controller. E a classe payment, é um simples enum com as opções que foram pedidas, DEBITO, CREDITO ou DINHEIRO, que também está ligada ao carrinho
+    As classes entity, listam tudo que vai no banco de dados, a classe repository, liga ao repositório h2, a classe service, faz ligação com a classe controller, que por sua vez, salva no banco de dados, ou obtém as informações dele.
